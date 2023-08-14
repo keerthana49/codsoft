@@ -1,0 +1,19 @@
+/*Create a program that generates a random number and asks the
+user to guess it. Provide feedback on whether the guess is too
+high or too low until the user guesses the correct number.*/
+#include <iostream>
+
+int main()
+{
+    int unum,num;
+    srand(time(0)); 
+	num = rand() % 100 + 1; 
+    do{
+        std::cout<<"guess the number"<<"\n";
+    std::cin>>unum;
+    if(unum<num){std::cout<<"guess a higher number"<<"\n";}
+    else if(unum>num){std::cout<<"guess a smaller number"<<"\n";}
+    else{std::cout<<"your guess was right"<<"\n";}
+    }while(unum!=num);
+    return 0;
+}
